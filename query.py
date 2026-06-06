@@ -22,7 +22,7 @@ prompt=ChatPromptTemplate.from_template( "You are an assistant for answering que
  " \n\nContext: {context} \n\nQuestion: {input}")
 document_chain=create_stuff_documents_chain(llm,prompt)
 rag_chain=create_retrieval_chain(retriever,document_chain)
-question = "What is Arun's major and CPI?"
+question = "what is transformer?"
 response = rag_chain.invoke({"input": question})
 
 print("\n--- AI ANSWER ---")

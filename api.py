@@ -5,14 +5,12 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_classic.chains import create_retrieval_chain
 
-from query import response
 
 load_dotenv()
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
 import uvicorn
 class QueryRequest(BaseModel):
     question:str
@@ -50,4 +48,4 @@ def ask_question(request: QueryRequest):
     return QueryResponse(answer=response["answer"], sources=extracted_sources)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
