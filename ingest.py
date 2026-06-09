@@ -8,7 +8,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 file_path = "sample.pdf"
 loader = PyPDFLoader(file_path)
 pages = loader.load()
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=2500, chunk_overlap=250)
 chunks = text_splitter.split_documents(pages)
 print(len(chunks))
 
