@@ -21,5 +21,6 @@ embeddings = GoogleGenerativeAIEmbeddings(
 )
 
 vector_store = FAISS.from_documents(chunks, embeddings)
-vector_store.save_local("faiss_index")
-print("Done! FAISS index saved.")
+save_path = "../backend/faiss_index" if os.path.exists("../backend") else "faiss_index"
+vector_store.save_local(save_path)
+print(f"Done! FAISS index saved to {save_path}.")

@@ -11,7 +11,8 @@ os.environ["GOOGLE_GENAI_API_VERSION"] = "v1"
 embeddings = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001",
     google_api_key=os.getenv("GOOGLE_API_KEY"))
-vector_store=FAISS.load_local("faiss_index",embeddings,allow_dangerous_deserialization=True )
+index_path = "faiss_index" if os.path.exists("faiss_index") else "../backend/faiss_index"
+vector_store=FAISS.load_local(index_path,embeddings,allow_dangerous_deserialization=True )
 retriever=vector_store.as_retriever(search_kwargs={"k": 3})
 llm=ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",

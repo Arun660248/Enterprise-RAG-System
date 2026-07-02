@@ -6,6 +6,4 @@ langchain-core
 langchain-community
 faiss-cpu
 python-dotenv
-streamlit
-requests
 pypdf
