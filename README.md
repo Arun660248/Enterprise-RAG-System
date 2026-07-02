@@ -1,4 +1,5 @@
 # Enterprise Document RAG System 🚀
+**Live Demo:** [rag.arunjyoticode.me](https://rag.arunjyoticode.me)
 
 An end-to-end, enterprise-grade **Retrieval-Augmented Generation (RAG)** assistant built to ingest, index, and query complex PDF documents with pinpoint accuracy. The system features a fully decoupled microservices architecture utilizing a FastAPI backend and a Streamlit frontend console. 
 
@@ -9,7 +10,7 @@ Access the application here: **[rag.arunjyoticode.me](https://rag.arunjyoticode.
 * **Instant Access:** No registration or login required.
 * **Pre-loaded Sandbox:** Demo report is loaded in active memory.
 * **Semantic Querying:** Ask questions instantly and get page-level citations.
-> Deployed on AWS EC2 behind an Nginx reverse proxy with SSL encryption.
+> Deployed securely using Docker and Cloudflare (DNS/SSL/Edge Routing) on AWS EC2.
 
 ---
 
