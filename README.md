@@ -4,6 +4,13 @@ An end-to-end, enterprise-grade **Retrieval-Augmented Generation (RAG)** assista
 
 Powered by **Google Gemini** for embeddings and synthesis, the system guarantees context-grounded response generation with auto-extracted source-and-page citations to completely eliminate AI hallucinations.
 
+## 🌐 Live Demo
+Access the application here: **[rag.arunjyoticode.me](https://rag.arunjyoticode.me)**
+* **Instant Access:** No registration or login required.
+* **Pre-loaded Sandbox:** Demo report is loaded in active memory.
+* **Semantic Querying:** Ask questions instantly and get page-level citations.
+> Deployed on AWS EC2 behind an Nginx reverse proxy with SSL encryption.
+
 ---
 
 ## 🖥️ System Interface
